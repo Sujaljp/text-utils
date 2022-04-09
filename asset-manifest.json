@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sujaljp/text-utils/static/css/main.8a06c222.css",
+    "main.js": "/Sujaljp/text-utils/static/js/main.31b0c19b.js",
+    "static/js/787.0cbdef75.chunk.js": "/Sujaljp/text-utils/static/js/787.0cbdef75.chunk.js",
+    "index.html": "/Sujaljp/text-utils/index.html",
+    "main.8a06c222.css.map": "/Sujaljp/text-utils/static/css/main.8a06c222.css.map",
+    "main.31b0c19b.js.map": "/Sujaljp/text-utils/static/js/main.31b0c19b.js.map",
+    "787.0cbdef75.chunk.js.map": "/Sujaljp/text-utils/static/js/787.0cbdef75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a06c222.css",
+    "static/js/main.31b0c19b.js"
+  ]
+}
