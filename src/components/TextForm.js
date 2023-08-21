@@ -30,6 +30,8 @@ export default function TextForm(props) {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
+    props.showAlert("Text copied to clipboard", "success")
   }
 
   const onChange =(event)=>{
@@ -50,18 +52,18 @@ export default function TextForm(props) {
             <textarea className="form-control" value={text} onChange={onChange} style={{backgroundColor: props.mode ==='light'? '#FFFFFF':'#3d3d3d' , color:  props.mode ==='light'? 'black':'#FFFFFF'}} id="myBox" rows="10"></textarea>
         </div>
         <br></br>
-        <button className="btn btn-primary mb3 mx-2" onClick={handleUpClick}>Convert to UPPERCASE</button>
-        <button className="btn btn-primary mb3 mx-2" onClick={handleLoClick}>Convert to lowercase</button>
-        <button className="btn btn-primary mb3 mx-2" onClick={handleClearClick}>Clear</button>
-        <button className="btn btn-primary mb3 mx-2" onClick={heck}>Heck</button>
-        <button className="btn btn-primary mb3 mx-2" onClick={copyBtn}>Copy Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mb3 mx-2 my-1" onClick={handleUpClick}>Convert to UPPERCASE</button>
+        <button disabled={text.length===0} className="btn btn-primary mb3 mx-2 my-1" onClick={handleLoClick}>Convert to lowercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mb3 mx-2 my-1" onClick={handleClearClick}>Clear</button>
+        <button disabled={text.length===0} className="btn btn-primary mb3 mx-2 my-1" onClick={heck}>Heck</button>
+        <button disabled={text.length===0} className="btn btn-primary mb3 mx-2 my-1" onClick={copyBtn}>Copy Text</button>
     
     <div className="container my-3">
       <h1>Your text Summary</h1>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
-      <p>{text.split(" ").length*0.008} Minutes read</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length*0.008} Minutes read</p>
       <h2>Preview</h2>
-      <p>{text.length !==0? text: 'Enter text to preview'}</p>
+      <p>{text.length !==0? text: 'Nothing to preview'}</p>
     </div>
     </div>
     </>
