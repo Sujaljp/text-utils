@@ -60,7 +60,6 @@ function App() {
           <Routes>
             <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>} />
             <Route path="about/" element={<About mode={mode} />} />
-            <Route path="*" element={<ErrorPage/>}/>
           </Routes>
           </div>
         </Router>      
