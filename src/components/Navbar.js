@@ -16,8 +16,8 @@ export default function Navbar(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav me-auto mb-2 mb-lg-0">
-            <Link to="/" className="nav-item nav-link active">Home <span className="sr-only">(current)</span></Link>
-            <Link to="/about" className="nav-item nav-link" >About</Link>
+            <Link to="/text-utils/" className="nav-item nav-link active">Home <span className="sr-only">(current)</span></Link>
+            <Link to="/text-utils/about" className="nav-item nav-link" >About</Link>
           </div>
           
           <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'} my-2 mx-2`}>
